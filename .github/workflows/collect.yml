@@ -18,24 +18,39 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 3
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v4          # main branch = your code
 
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
 
+      # Data lives on its own branch ("data") so pushes to main never conflict with the bot.
+      - name: Prepare data branch
+        run: |
+          set -e
+          if git ls-remote --exit-code --heads origin data >/dev/null 2>&1; then
+            git fetch --depth 1 origin data
+            git worktree add --detach databranch FETCH_HEAD
+          else
+            # first run: create the branch, seeded with any data/ folder already on main
+            rm -rf /tmp/seed && mkdir /tmp/seed
+            if [ -d data ]; then cp -r data/. /tmp/seed/; fi
+            git worktree add --detach databranch
+            git -C databranch checkout --orphan data
+            git -C databranch rm -rf . > /dev/null
+            cp -r /tmp/seed/. databranch/
+          fi
+
       - name: Poll counts
-        run: python collect.py
-        env:
-          COUNTS_URL: ${{ vars.COUNTS_URL }}
+        run: python collect.py --data-dir databranch
 
       - name: Commit data
+        working-directory: databranch
         run: |
           git config user.name  "collector-bot"
           git config user.email "collector-bot@users.noreply.github.com"
-          git add data
+          git add -A
           if ! git diff --cached --quiet; then
             git commit -m "data $(date -u +%Y-%m-%dT%H:%MZ)"
-            git pull --rebase --autostash
-            git push
+            git push origin HEAD:data
           fi
