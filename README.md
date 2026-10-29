@@ -3,17 +3,17 @@
 Polls the public Campus Recreation facility-counts feed and logs every change.
 
 ## Files
-- `collect.py` — the collector (standard library only)
-- `.github/workflows/collect.yml` — runs it every 5 min on GitHub Actions
-- `data/counts.csv` — one row per change in a location's reading
-- `data/polls.csv` — one row per poll attempt (use it to find gaps in collection)
+
+- `data/building.csv` — whole-building %, one row per 30-min interval
+- `data/zones.csv`    — Gym 1 / Strength & Conditioning readings
+- `data/day.csv`      — today's full 30-min series (backfills missed polls)
+- `data/week.csv`     — the site's hourly "typical" curve (baseline)
+- `data/polls.csv`    — one row per request (use it to find gaps)
 
 ## Setup (GitHub Actions)
 1. Create a **public** repo (public repos get unlimited free Actions minutes; private ones would run out) and push this folder.
-2. Settings → Secrets and variables → Actions → **Variables** → New repository variable:
-   `COUNTS_URL` = the endpoint URL you found in the browser's Network tab.
-3. Settings → Actions → General → Workflow permissions → **Read and write permissions**.
-4. Actions tab → `collect` → **Run workflow** once to test. Check that `data/` appears.
+2. Settings → Actions → General → Workflow permissions → **Read and write permissions**.
+3. Actions tab → `collect` → **Run workflow** once to test. Check that `data/` appears.
 
 Note: GitHub disables scheduled workflows after 60 days without repo activity; the
 data commits count as activity, so this is not an issue during the project.
