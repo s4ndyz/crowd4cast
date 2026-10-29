@@ -1,7 +1,0 @@
-fetched_at_utc,source,status,n_records,n_new_rows,error
-2026-10-29T02:33:09Z,error,0,0,Expecting value: line 2 column 1 (char 1)
-2026-10-29T04:37:49Z,building,ok,2,2,
-2026-10-29T04:37:49Z,zones,ok,2,2,
-2026-10-29T04:37:49Z,day:ARC,ok,34,34,
-2026-10-29T04:37:49Z,day:CRCE,ok,32,32,
-2026-10-29T04:37:49Z,week:ARC,ok,110,110,
