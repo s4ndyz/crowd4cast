@@ -57,3 +57,8 @@ fetched_at_utc,source,status,n_records,n_new_rows,error
 2026-10-31T07:32:42Z,day:ARC,error,0,0,0 usable records (format changed?)
 2026-10-31T07:32:42Z,day:CRCE,error,0,0,0 usable records (format changed?)
 2026-10-31T07:32:42Z,week:ARC,ok,110,0,
+2026-10-31T13:50:06Z,building,ok,1,1,
+2026-10-31T13:50:06Z,zones,ok,2,2,
+2026-10-31T13:50:06Z,day:ARC,error,0,0,0 usable records (format changed?)
+2026-10-31T13:50:06Z,day:CRCE,error,0,0,0 usable records (format changed?)
+2026-10-31T13:50:06Z,week:ARC,ok,110,0,
