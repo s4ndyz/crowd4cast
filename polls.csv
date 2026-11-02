@@ -97,3 +97,8 @@ fetched_at_utc,source,status,n_records,n_new_rows,error
 2026-11-01T22:20:37Z,day:ARC,ok,14,7,
 2026-11-01T22:20:37Z,day:CRCE,ok,10,7,
 2026-11-01T22:20:37Z,week:ARC,ok,110,0,
+2026-11-02T01:36:22Z,building,ok,2,2,
+2026-11-02T01:36:22Z,zones,ok,2,2,
+2026-11-02T01:36:22Z,day:ARC,ok,21,7,
+2026-11-02T01:36:22Z,day:CRCE,ok,14,4,
+2026-11-02T01:36:22Z,week:ARC,ok,110,0,
