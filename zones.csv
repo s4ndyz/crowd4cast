@@ -73,3 +73,5 @@ fetched_at_utc,facility_id,name,description,last_updated_local,capacity_pct
 2026-11-06T02:42:34Z,3a9daeeb-94ec-4b4f-acf0-ce182291e189,Gym 4,Strength & Conditioning,2026-11-05T20:42:17,30.0
 2026-11-06T09:54:58Z,f7f41ee5-29c8-4409-86d3-5b24a3ea2a72,Gym 1,East Wing Basketball Courts,2026-11-06T03:54:28,0.0
 2026-11-06T09:54:58Z,3a9daeeb-94ec-4b4f-acf0-ce182291e189,Gym 4,Strength & Conditioning,2026-11-06T03:54:28,0.0
+2026-11-06T17:08:25Z,f7f41ee5-29c8-4409-86d3-5b24a3ea2a72,Gym 1,East Wing Basketball Courts,2026-11-06T11:08:02,7.0
+2026-11-06T17:08:25Z,3a9daeeb-94ec-4b4f-acf0-ce182291e189,Gym 4,Strength & Conditioning,2026-11-06T11:08:02,29.0
