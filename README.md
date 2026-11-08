@@ -1,6 +1,4 @@
-# ARC / CRCE crowd data collector (CS 441 final project)
-
-Polls the public Campus Recreation facility-counts feed and logs every change.
+# crowd data collector 
 
 ## Files
 
