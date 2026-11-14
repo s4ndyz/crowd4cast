@@ -339,3 +339,8 @@ fetched_at_utc,source,status,n_records,n_new_rows,error
 2026-11-14T02:47:01Z,day:ARC,ok,29,8,
 2026-11-14T02:47:01Z,day:CRCE,ok,27,8,
 2026-11-14T02:47:01Z,week:ARC,ok,110,0,
+2026-11-14T09:30:56Z,building,ok,1,1,
+2026-11-14T09:30:56Z,zones,ok,2,2,
+2026-11-14T09:30:56Z,day:ARC,error,0,0,0 usable records (format changed?)
+2026-11-14T09:30:56Z,day:CRCE,error,0,0,0 usable records (format changed?)
+2026-11-14T09:30:56Z,week:ARC,ok,110,0,
