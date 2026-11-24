@@ -514,3 +514,8 @@ fetched_at_utc,source,status,n_records,n_new_rows,error
 2026-11-24T00:50:01Z,day:ARC,error,0,0,0 usable records (format changed?)
 2026-11-24T00:50:01Z,day:CRCE,ok,14,14,
 2026-11-24T00:50:01Z,week:ARC,error,0,0,0 usable records (format changed?)
+2026-11-24T10:29:17Z,building,error,0,0,HTTP Error 500: Internal Server Error
+2026-11-24T10:29:17Z,zones,ok,2,2,
+2026-11-24T10:29:17Z,day:ARC,error,0,0,HTTP Error 500: Internal Server Error
+2026-11-24T10:29:17Z,day:CRCE,error,0,0,HTTP Error 500: Internal Server Error
+2026-11-24T10:29:17Z,week:ARC,error,0,0,HTTP Error 500: Internal Server Error
