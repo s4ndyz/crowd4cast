@@ -1,0 +1,19 @@
+date,event,flag
+2026-11-07,Home football vs Nebraska,football_home
+2026-11-20,Last day before fall break (Fri),pre_break
+2026-11-21,Fall break - ARC closed (also home football vs Iowa),closed
+2026-11-22,Fall break - ARC closed,closed
+2026-11-23,Fall break - ARC closed,closed
+2026-11-24,Fall break - ARC closed,closed
+2026-11-25,Fall break - ARC closed,closed
+2026-11-26,Fall break - ARC closed (Thanksgiving),closed
+2026-11-27,Fall break - ARC closed,closed
+2026-11-28,Fall break - ARC closed,closed
+2026-11-29,Fall break - ARC closed,closed
+2026-11-30,First week back after break,post_break
+2026-12-01,First week back after break,post_break
+2026-12-02,First week back after break,post_break
+2026-12-03,First week back after break,post_break
+2026-12-04,First week back after break,post_break
+2026-12-09,Last day of instruction,last_day_instruction
+2026-12-10,Reading day,reading_day
