@@ -6,8 +6,13 @@ on:
     # GitHub drops most */5 runs on free repos (~3-5 runs/day in practice). The day feed
     # backfills the whole day, so one run after closing captures it completely.
     # Times are UTC; campus is CST (UTC-6) through the end of the semester.
+    # Several slots because GitHub drops individual scheduled runs too (11/28: 04:40 ran,
+    # 05:20 did not). All are before local midnight, so any one of them is enough.
     - cron: "40 4 * * *"      # 22:40 CST: after Fri/Sat/Sun 22:00 close
-    - cron: "20 5 * * *"      # 23:20 CST: after Mon-Thu 23:00 close
+    - cron: "5 5 * * *"       # 23:05 CST: after Mon-Thu 23:00 close (and all other days)
+    - cron: "20 5 * * *"      # 23:20 CST
+    - cron: "35 5 * * *"      # 23:35 CST
+    - cron: "50 5 * * *"      # 23:50 CST
   workflow_dispatch: {}        # lets you press "Run workflow" to test by hand
 
 # never run two collectors at once (they would race on the git push)
@@ -48,10 +53,11 @@ jobs:
 
       - name: Poll counts
         run: |
-          # closing-time runs must fetch day+week even if an earlier run was <55 min ago
+          # closing-time runs (every schedule except */5) must fetch day+week even if an
+          # earlier run was <55 min ago
           case "${{ github.event.schedule }}" in
-            "40 4 * * *"|"20 5 * * *") python collect.py --data-dir databranch --sources all ;;
-            *) python collect.py --data-dir databranch ;;
+            "*/5 * * * *"|"") python collect.py --data-dir databranch ;;
+            *) python collect.py --data-dir databranch --sources all ;;
           esac
 
       - name: Commit data
